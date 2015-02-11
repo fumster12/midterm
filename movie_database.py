@@ -14,7 +14,7 @@ class Movie:
 ##            year = row[4]
 ##            
 ##            
-    def find_highest_rated():
+    def find_highest_rated(rates):
         with open("imdb_top250.csv", encoding='utf-8') as file:
             reader = csv.reader(file)
             for row in reader:
@@ -23,8 +23,7 @@ class Movie:
                 director = row[2]
                 rating = row[3]
                 year = row[4]
-                rating = row[3]
-                if rating > float(9):
+                if rating > 9:
                     print(title)
             
 
